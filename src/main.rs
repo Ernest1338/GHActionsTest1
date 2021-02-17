@@ -1,5 +1,8 @@
+#![crate_name = "win95keygen"]
+
 use rand::Rng;
 
+/// generates one windows 95 compatible key
 fn gen_key() {
     // generating random number in range from 0 to 999 (max 3 digit number)
     let mut first_three_digits = rand::thread_rng().gen_range(0..999+1).to_string();
@@ -53,6 +56,7 @@ fn gen_key() {
     println!("{}", key);
 }
 
+/// generates one windows 95 (OEM) compatible key
 fn gen_oem() {
     // generating random number in range from 1 to 366 (max 3 digit number)
     let mut first_three_digits = rand::thread_rng().gen_range(1..366+1).to_string();
@@ -117,19 +121,24 @@ fn gen_oem() {
 
 }
 
+/// main function
 fn main() {
 
-    println!("5 CD Keys: ");
+    println!("0-5 CD Keys: ");
 
-    // generating 5 keys (and displaying them)
-    for _ in 0..5 {
+    let mut random_int = rand::thread_rng().gen_range(0..5+1);
+
+    // generating keys (and displaying them)
+    for _ in 0..random_int {
         gen_key();
     }
 
-    println!("\n5 CD Keys (OEM):");
+    println!("\n0-5 CD Keys (OEM):");
 
-    // generating 5 OEM keys (and displaying them)
-    for _ in 0..5 {
+    random_int = rand::thread_rng().gen_range(0..5+1);
+
+    // generating OEM keys (and displaying them)
+    for _ in 0..random_int {
         gen_oem();
     }
 }
