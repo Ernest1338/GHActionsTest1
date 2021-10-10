@@ -131,7 +131,7 @@ fn test_test() {
     );
 }
 
-/// Return 1
+/// Return number 1
 fn return_one() -> i32 {
     let one = 1;
 
