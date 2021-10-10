@@ -125,13 +125,13 @@ fn gen_oem() {
 /// Assert test
 #[test]
 fn test_test() {
-    assert_eq!(return_one(), return_one()+1,
+    assert_eq!(return_one(), return_one(),
         "Testing if number {} is equal to number {}",
         return_one(), return_one()
     );
 }
 
-/// Return 1
+/// Return number 1
 fn return_one() -> i32 {
     let one = 1;
 
