@@ -1,4 +1,5 @@
 #![crate_name = "win95keygen"]
+#![allow(dead_code)]
 
 use rand::Rng;
 
@@ -119,6 +120,22 @@ fn gen_oem() {
     // displaying generated key to user
     println!("{}", key);
 
+}
+
+/// Assert test
+#[test]
+fn test_test() {
+    assert_eq!(return_one(), return_one(),
+        "Testing if number {} is equal to number {}",
+        return_one(), return_one()
+    );
+}
+
+/// Return 1
+fn return_one() -> i32 {
+    let one = 1;
+
+    return one;
 }
 
 /// main function
