@@ -125,7 +125,7 @@ fn gen_oem() {
 /// Assert test
 #[test]
 fn test_test() {
-    assert_eq!(return_one(), return_one(),
+    assert_eq!(return_one(), return_one()+1,
         "Testing if number {} is equal to number {}",
         return_one(), return_one()
     );
